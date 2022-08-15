@@ -1,0 +1,29 @@
+$container-size: 1290px;
+$container-space: 20px;
+$transition: 0.3s ease;
+$distance: 250px;
+$gap: 30px;
+$box: 520px;
+$box-size: 330px;
+$container-md: 1160px;
+$gutter-col: 15px;
+$grid-col-count: 12;
+$grid-col-size: math.div(100%, $grid-col-count);
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xs: 576px;
+
+
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --deer_orange_400: #FF6336;
+    --grey_900: #1D1D1B;
+    --grey_800: #282828;
+    --pink_50: #FFF8E4;
+    --blue_200: #C9E8F2;
+    --brown_200: #DABC98;
+    --red_400: #FF9C7D;
+    --deep_purple_50: #EEEEEE;
+}

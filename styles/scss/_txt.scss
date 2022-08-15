@@ -1,0 +1,66 @@
+/* txt styles */
+
+@mixin txt ($font-weight, $font-size, $line-height) {
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: var(--black);
+}
+
+.nav-txt {
+    @include txt (normal, 15px, 25px);
+}
+
+.h1 {
+    @include txt (600, 65px, 70px);
+    overflow-wrap: anywhere;
+}
+
+.h2 {
+    @include txt (600, 50px, 60px);
+    overflow-wrap: anywhere;
+}
+
+.h3 {
+    @include txt (600, 40px, 50px);
+    overflow-wrap: anywhere;
+}
+
+.h4 {
+    @include txt (600, 35px, 50px);
+    overflow-wrap: anywhere;
+}
+
+.h5 {
+    @include txt (600, 30px, 40px);
+    overflow-wrap: anywhere;
+}
+
+.h6 {
+    @include txt (normal, 25px, 35px);
+}
+
+.txt {
+    @include txt (normal, 20px, 30px)
+}
+
+.txt-bold {
+    @include txt (600, 20px, 30px);
+    border-bottom: 3px solid transparent;
+    transition: border-bottom-color $transition;
+
+    &:hover {
+        border-bottom-color: var(--red_400);
+    }
+}
+
+.txt-sm {
+    @include txt (normal, 18px, 25px);
+    text-align: center;
+}
+
+.footer-txt {
+    @include txt (normal, 12px, 15px)
+}
+
+/* end txt styles */

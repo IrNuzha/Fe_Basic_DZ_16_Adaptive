@@ -1,0 +1,125 @@
+/* common styles */
+
+.container {
+    max-width: calc($container-size + $container-space * 2);
+    margin: 0 auto;
+    padding: 20px 20px 20px 20px;
+}
+
+.flex-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.center-direct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background-color: transparent;
+    @include txt (600, 16px, 0px);
+    min-height: 60px;
+    transition: $transition;
+
+    &:hover {
+        box-shadow: 7px 3px 3px 3px #e3cccc;
+    }
+}
+
+.flexible {
+    flex-wrap: wrap;
+}
+
+.instruction-txt-box {
+    max-width: $box;
+    width: 100%;
+
+    @media (min-width:768px) and (max-width:1200px) {
+        max-width: 1151px;
+    }
+}
+
+.instruction-distance {
+    margin-bottom: 13vw;
+}
+
+.gap {
+    margin: $gap 0;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.container-box {
+    flex-direction: column;
+    min-height: 294px;
+    height: 100%;
+}
+
+.around-distance {
+    min-height: calc(100vh - 95px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: $gutter-col $gutter-col 0;
+}
+
+@for $i from 1 through $grid-col-count {
+    .col-#{$i} {
+        flex: 0 0 auto;
+        flex-direction: column;
+        width: $grid-col-size * $i;
+        padding: $gutter-col $gutter-col 0;
+    }
+}
+
+@media screen and (max-width: $xl) {
+    @for $i from 1 through $grid-col-count {
+        .col-xl-#{$i} {
+            flex: 0 0 auto;
+            flex-direction: column;
+            width: $grid-col-size * $i;
+            padding: $gutter-col $gutter-col 0;
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    @for $i from 1 through $grid-col-count {
+        .col-md-#{$i} {
+            flex: 0 0 auto;
+            flex-direction: column;
+            width: $grid-col-size * $i;
+            padding: $gutter-col $gutter-col 0;
+        }
+    }
+}
+
+@media screen and (max-width: $lg) {
+    @for $i from 1 through $grid-col-count {
+        .col-lg-#{$i} {
+            flex: 0 0 auto;
+            flex-direction: column;
+            width: $grid-col-size * $i;
+            padding: $gutter-col $gutter-col 0;
+        }
+    }
+}
+
+
+
+/* end common styles */
